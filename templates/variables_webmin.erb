@@ -1,0 +1,49 @@
+# File Managed By Puppet
+
+These are the variables used by the module webmin
+
+User variables (unfiltered):
+# $webmin_server = <%= scope.lookupvar('webmin_server') %>
+
+User variables (after params.pp filter):
+# $webmin::params::server = <%= scope.lookupvar('webmin::params::server') %>
+
+General internal variables:
+$webmin::params::packagename = <%= scope.lookupvar('webmin::params::packagename') %>
+$webmin::params::servicename = <%= scope.lookupvar('webmin::params::servicename') %>
+$webmin::params::processname = <%= scope.lookupvar('webmin::params::processname') %>
+$webmin::params::hasstatus = <%= scope.lookupvar('webmin::params::hasstatus') %>
+$webmin::params::configfile = <%= scope.lookupvar('webmin::params::configfile') %>
+$webmin::params::configfile_mode = <%= scope.lookupvar('webmin::params::configfile_mode') %>
+$webmin::params::configfile_owner = <%= scope.lookupvar('webmin::params::configfile_owner') %>
+$webmin::params::configfile_group = <%= scope.lookupvar('webmin::params::configfile_group') %>
+$webmin::params::configdir = <%= scope.lookupvar('webmin::params::configdir') %>
+$webmin::params::initconfigfile = <%= scope.lookupvar('webmin::params::initconfigfile') %>
+$webmin::params::pidfile = <%= scope.lookupvar('webmin::params::pidfile') %>
+$webmin::params::datadir = <%= scope.lookupvar('webmin::params::datadir') %>
+$webmin::params::logdir = <%= scope.lookupvar('webmin::params::logdir') %>
+$webmin::params::protocol = <%= scope.lookupvar('webmin::params::protocol') %>
+$webmin::params::port = <%= scope.lookupvar('webmin::params::port') %>
+
+Variables used by monitor class:
+$webmin::params::monitor_target_real = <%= scope.lookupvar('webmin::params::monitor_target_real') %> ( Set with $webmin_monitor_target )
+$webmin::params::monitor_baseurl_real = <%= scope.lookupvar('webmin::params::monitor_baseurl_real') %> ( Set with $webmin_monitor_baseurl )
+$webmin::params::monitor_url_pattern = <%= scope.lookupvar('webmin::params::monitor_url_pattern') %> ( Set with $webmin_monitor_url_pattern )
+$webmin::params::monitor_port_enable = <%= scope.lookupvar('webmin::params::monitor_port_enable') %> ( Set with $webmin_monitor_port )
+$webmin::params::monitor_url_enable = <%= scope.lookupvar('webmin::params::monitor_url_enable') %> ( Set with $webmin_monitor_url )
+$webmin::params::monitor_process_enable = <%= scope.lookupvar('webmin::params::monitor_process_enable') %> ( Set with $webmin_monitor_process )
+$webmin::params::monitor_plugin_enable = <%= scope.lookupvar('webmin::params::monitor_plugin_enable') %> ( Set with $webmin_monitor_plugin )
+
+Variables used by backup class:
+$webmin::params::backup_target_real = <%= scope.lookupvar('webmin::params::backup_target_real') %> ( Set with $webmin_backup_target )
+$webmin::params::backup_frequency = <%= scope.lookupvar('webmin::params::backup_frequency') %> ( Set with $webmin_backup_frequency )
+$webmin::params::backup_data_enable = <%= scope.lookupvar('webmin::params::backup_data_enable') %> ( Set with $webmin_backup_data )
+$webmin::params::backup_log_enable = <%= scope.lookupvar('webmin::params::backup_log_enable') %> ( Set with $webmin_backup_log )
+
+Variables used by firewall class:
+$webmin::params::firewall_source_real = <%= scope.lookupvar('webmin::params::firewall_source_real') %> ( Set with $webmin_firewall_source )
+$webmin::params::firewall_destination_real = <%= scope.lookupvar('webmin::params::firewall_destination_real') %> ( Set with $webmin_firewall_destination )
+$webmin::params::firewall_enable = <%= scope.lookupvar('webmin::params::firewall_destination_real') %> ( Set with $webmin_firewall_enable )
+
+Module base source for static files:
+$webmin::params::general_base_source = <%= scope.lookupvar('webmin::params::general_base_source') %> ( Set with $base_source )
